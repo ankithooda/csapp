@@ -51,16 +51,11 @@ Disassembly of section .note.gnu.build-id:
  372:	00 00                	add    %al,(%rax)
  374:	47                   	rex.RXB
  375:	4e 55                	rex.WRX push %rbp
- 377:	00 bf d5 f4 12 0a    	add    %bh,0xa12f4d5(%rdi)
- 37d:	8d 4f 7c             	lea    0x7c(%rdi),%ecx
- 380:	50                   	push   %rax
- 381:	06                   	(bad)  
- 382:	c5 3e 81             	(bad)
- 385:	cc                   	int3   
- 386:	c2 68 88             	ret    $0x8868
- 389:	9e                   	sahf   
- 38a:	a3                   	.byte 0xa3
- 38b:	ef                   	out    %eax,(%dx)
+ 377:	00 b1 34 da 4e 5e    	add    %dh,0x5e4eda34(%rcx)
+ 37d:	17                   	(bad)  
+ 37e:	33 8a f0 5a e2 a8    	xor    -0x571da510(%rdx),%ecx
+ 384:	3d d6 f1 64 35       	cmp    $0x3564f1d6,%eax
+ 389:	d8 65 b5             	fsubs  -0x4b(%rbp)
 
 Disassembly of section .note.ABI-tag:
 
@@ -517,8 +512,8 @@ Disassembly of section .text:
     11aa:	f3 0f 1e fa          	endbr64 
     11ae:	55                   	push   %rbp
     11af:	48 89 e5             	mov    %rsp,%rbp
-    11b2:	48 83 ec 30          	sub    $0x30,%rsp
-    11b6:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+    11b2:	48 83 ec 40          	sub    $0x40,%rsp
+    11b6:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
     11ba:	48 89 c7             	mov    %rax,%rdi
     11bd:	e8 be fe ff ff       	call   1080 <gets@plt>
     11c2:	90                   	nop
