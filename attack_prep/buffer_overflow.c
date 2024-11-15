@@ -7,7 +7,8 @@ void print_exploit_message() {
 }
 
 void read_from_input(){
-  char buf[56];
+  char buf[64];
+  printf("Stack starts at - %p\n", buf);
   gets(buf);
   return;
 }
